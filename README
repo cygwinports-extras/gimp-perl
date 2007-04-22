@@ -1,0 +1,173 @@
+gimp2-perl
+-------------------------------------------
+Gimp-Perl extension for writing Gimp Extensions, Plug-ins,
+and Load & Save-Handlers.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  gimp2-2.2.13-1
+  glib2-2.12.9-1
+  gtk2-x11-2.10.9-1
+  perl-5.8.7-5
+  perl-Glib-1.141-1
+  perl-Gtk2-1.142-1
+  perl-PDL-2.4.3-1
+
+Build requirements:
+(besides corresponding devel packages)
+  cygwin-1.5.24-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical homepage:
+  http://www.gimp.org/
+  http://search.cpan.org/~sjburges/Gimp/
+
+Canonical download:
+  http://www.cpan.org/authors/id/S/SJ/SJBURGES/
+  ftp://ftp.gimp.org/pub/gimp/plug-ins/v2.0/perl/
+
+-------------------------------------------
+
+Build instructions:
+  unpack gimp2-perl-2.2_pre1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./gimp2-perl-2.2_pre1-X.cygport all
+
+This will create:
+  /usr/src/gimp2-perl-2.2_pre1-X-src.tar.bz2
+  /usr/src/gimp2-perl-2.2_pre1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/postinstall/gimp2-perl.sh
+  /usr/bin/embedxpm
+  /usr/bin/gimpdoc
+  /usr/bin/xcftopnm
+  /usr/lib/gimp/2.0/plug-ins/Perl-Server
+  /usr/lib/gimp/2.0/plug-ins/animate_cells
+  /usr/lib/gimp/2.0/plug-ins/blended2
+  /usr/lib/gimp/2.0/plug-ins/blowinout
+  /usr/lib/gimp/2.0/plug-ins/bricks
+  /usr/lib/gimp/2.0/plug-ins/burst
+  /usr/lib/gimp/2.0/plug-ins/centerguide
+  /usr/lib/gimp/2.0/plug-ins/colorhtml
+  /usr/lib/gimp/2.0/plug-ins/dataurl
+  /usr/lib/gimp/2.0/plug-ins/ditherize
+  /usr/lib/gimp/2.0/plug-ins/dots
+  /usr/lib/gimp/2.0/plug-ins/dust
+  /usr/lib/gimp/2.0/plug-ins/fade-alpha
+  /usr/lib/gimp/2.0/plug-ins/frame_filter
+  /usr/lib/gimp/2.0/plug-ins/frame_reshuffle
+  /usr/lib/gimp/2.0/plug-ins/glowing_steel
+  /usr/lib/gimp/2.0/plug-ins/goldenmean
+  /usr/lib/gimp/2.0/plug-ins/gouge
+  /usr/lib/gimp/2.0/plug-ins/guide_remove
+  /usr/lib/gimp/2.0/plug-ins/guidegrid
+  /usr/lib/gimp/2.0/plug-ins/guides_to_selection
+  /usr/lib/gimp/2.0/plug-ins/image_tile
+  /usr/lib/gimp/2.0/plug-ins/innerbevel
+  /usr/lib/gimp/2.0/plug-ins/layerfuncs
+  /usr/lib/gimp/2.0/plug-ins/mirrorsplit
+  /usr/lib/gimp/2.0/plug-ins/perlotine
+  /usr/lib/gimp/2.0/plug-ins/pixelmap
+  /usr/lib/gimp/2.0/plug-ins/prep4gif
+  /usr/lib/gimp/2.0/plug-ins/randomart1
+  /usr/lib/gimp/2.0/plug-ins/randomblends
+  /usr/lib/gimp/2.0/plug-ins/redeye
+  /usr/lib/gimp/2.0/plug-ins/repdup
+  /usr/lib/gimp/2.0/plug-ins/roundsel
+  /usr/lib/gimp/2.0/plug-ins/scratches
+  /usr/lib/gimp/2.0/plug-ins/selective_sharpen
+  /usr/lib/gimp/2.0/plug-ins/sethspin
+  /usr/lib/gimp/2.0/plug-ins/stamps
+  /usr/lib/gimp/2.0/plug-ins/tex-to-float
+  /usr/lib/gimp/2.0/plug-ins/translogo
+  /usr/lib/gimp/2.0/plug-ins/view3d
+  /usr/lib/gimp/2.0/plug-ins/warp-sharp
+  /usr/lib/gimp/2.0/plug-ins/webify
+  /usr/lib/gimp/2.0/plug-ins/windify
+  /usr/lib/gimp/2.0/plug-ins/xachlego
+  /usr/lib/gimp/2.0/plug-ins/xachshadow
+  /usr/lib/gimp/2.0/plug-ins/xachvision
+  /usr/lib/gimp/2.0/plug-ins/yinyang
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Compat.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Config.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Data.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Feature.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Fu.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Lib.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Module.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Net.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/OO.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Pixel.pod
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Pod.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/UI.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/UI/Install/typemap
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/UI/Install/typemap.pdl
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Util.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/basewidget.pm
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/.packlist
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Gimp.bs
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Gimp.dll
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Lib/Lib.bs
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Lib/Lib.dll
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Lib/libLib.dll.a
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Net/Net.bs
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Net/Net.dll
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Net/libNet.dll.a
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/UI/UI.bs
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/UI/UI.dll
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/UI/libUI.dll.a
+  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/libGimp.dll.a
+  /usr/share/doc/Cygwin/gimp2-perl-2.2_pre1.README
+  /usr/share/doc/gimp2-perl-2.2_pre1/AUTHORS
+  /usr/share/doc/gimp2-perl-2.2_pre1/COPYING
+  /usr/share/doc/gimp2-perl-2.2_pre1/ChangeLog
+  /usr/share/doc/gimp2-perl-2.2_pre1/Changes
+  /usr/share/doc/gimp2-perl-2.2_pre1/NEWS
+  /usr/share/doc/gimp2-perl-2.2_pre1/README
+  /usr/share/doc/gimp2-perl-2.2_pre1/TODO
+  /usr/share/man/man1/embedxpm.1.gz
+  /usr/share/man/man1/xcftopnm.1.gz
+  /usr/share/man/man3/Gimp.3pm.gz
+  /usr/share/man/man3/Gimp.Compat.3pm.gz
+  /usr/share/man/man3/Gimp.Config.3pm.gz
+  /usr/share/man/man3/Gimp.Data.3pm.gz
+  /usr/share/man/man3/Gimp.Feature.3pm.gz
+  /usr/share/man/man3/Gimp.Fu.3pm.gz
+  /usr/share/man/man3/Gimp.Lib.3pm.gz
+  /usr/share/man/man3/Gimp.Module.3pm.gz
+  /usr/share/man/man3/Gimp.Net.3pm.gz
+  /usr/share/man/man3/Gimp.OO.3pm.gz
+  /usr/share/man/man3/Gimp.Pixel.3pm.gz
+  /usr/share/man/man3/Gimp.Pod.3pm.gz
+  /usr/share/man/man3/Gimp.UI.3pm.gz
+  /usr/share/man/man3/Gimp.Util.3pm.gz
+  /usr/share/perl/cygwin-pods/5.8/gimp2-perl.pod
+
+------------------
+
+Port Notes:
+
+----- version 2.2_pre1-1 -----
+Version bump.
+
+----- version 2.0-2 -----
+Rebuilt with perl-5.8.7 and gimp-2.2.
+
+----- version 2.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
