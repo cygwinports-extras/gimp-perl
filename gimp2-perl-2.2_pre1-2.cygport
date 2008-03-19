@@ -1,0 +1,21 @@
+inherit perl
+
+DESCRIPTION="Gimp Perl extensions"
+HOMEPAGE="http://www.gimp.org/"
+SRC_URI="ftp://ftp.gimp.org/pub/gimp/plug-ins/v${PV_MAJ_MIN}/perl/Gimp-${PV/_}.tar.gz"
+SRC_DIR="${PN/${PV_MAJ}}"
+
+MAKEOPTS+=" OTHERLDFLAGS=${PERL_VENDORARCH}/auto/Glib/Glib.dll"
+DEPS_PATH="${PERL_VENDORARCH}/auto/Glib"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	perl_compile
+
+	for d in Gimp Net UI
+	do
+		cd ${B}/${d}
+		cygmake manifypods
+	done
+}

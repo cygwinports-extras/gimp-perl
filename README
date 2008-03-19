@@ -4,20 +4,19 @@ Gimp-Perl extension for writing Gimp Extensions, Plug-ins,
 and Load & Save-Handlers.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  gimp2-2.2.13-1
-  glib2-2.12.9-1
-  gtk2-x11-2.10.9-1
-  perl-5.8.7-5
-  perl-Glib-1.141-1
-  perl-Gtk2-1.142-1
-  perl-PDL-2.4.3-1
+  cygwin-1.5.25-7
+  gimp2-2.4.4-1
+  glib2-2.14.6-1
+  gtk2-x11-2.12.7-1
+  perl-5.10.0-3
+  perl-Glib-1.164-1
+  perl-Gtk2-1.164-1
+  perl-PDL-2.4.3-2
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.24-2
   binutils-20060817-1
-  cygport-0.2.11-1
+  cygport-0.3.9-1
   gcc-core-3.4.4-3
   make-3.81-1
   pkg-config-0.21-1
@@ -29,7 +28,7 @@ Canonical homepage:
 
 Canonical download:
   http://www.cpan.org/authors/id/S/SJ/SJBURGES/
-  ftp://ftp.gimp.org/pub/gimp/plug-ins/v2.0/perl/
+  ftp://ftp.gimp.org/pub/gimp/plug-ins/v2.2/perl/
 
 -------------------------------------------
 
@@ -48,7 +47,6 @@ This will create:
 
 Files included in the binary package:
 
-  /etc/postinstall/gimp2-perl.sh
   /usr/bin/embedxpm
   /usr/bin/gimpdoc
   /usr/bin/xcftopnm
@@ -99,37 +97,28 @@ Files included in the binary package:
   /usr/lib/gimp/2.0/plug-ins/xachshadow
   /usr/lib/gimp/2.0/plug-ins/xachvision
   /usr/lib/gimp/2.0/plug-ins/yinyang
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Compat.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Config.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Data.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Feature.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Fu.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Lib.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Module.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Net.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/OO.pod
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Pixel.pod
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Pod.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/UI.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/UI/Install/typemap
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/UI/Install/typemap.pdl
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/Util.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/Gimp/basewidget.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/.packlist
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Gimp.bs
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Gimp.dll
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Lib/Lib.bs
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Lib/Lib.dll
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Lib/libLib.dll.a
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Net/Net.bs
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Net/Net.dll
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/Net/libNet.dll.a
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/UI/UI.bs
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/UI/UI.dll
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/UI/libUI.dll.a
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/Gimp/libGimp.dll.a
-  /usr/share/doc/Cygwin/gimp2-perl-2.2_pre1.README
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Compat.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Config.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Data.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Feature.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Fu.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Lib.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Module.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Net.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/OO.pod
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Pixel.pod
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Pod.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/UI.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/UI/Install/typemap
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/UI/Install/typemap.pdl
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/Util.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/Gimp/basewidget.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/auto/Gimp/.packlist
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/auto/Gimp/Gimp.dll
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/auto/Gimp/Lib/Lib.dll
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/auto/Gimp/Net/Net.dll
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/auto/Gimp/UI/UI.dll
   /usr/share/doc/gimp2-perl-2.2_pre1/AUTHORS
   /usr/share/doc/gimp2-perl-2.2_pre1/COPYING
   /usr/share/doc/gimp2-perl-2.2_pre1/ChangeLog
@@ -153,11 +142,13 @@ Files included in the binary package:
   /usr/share/man/man3/Gimp.Pod.3pm.gz
   /usr/share/man/man3/Gimp.UI.3pm.gz
   /usr/share/man/man3/Gimp.Util.3pm.gz
-  /usr/share/perl/cygwin-pods/5.8/gimp2-perl.pod
 
 ------------------
 
 Port Notes:
+
+----- version 2.2_pre1-2 -----
+Rebuilt for perl-5.10.
 
 ----- version 2.2_pre1-1 -----
 Version bump.

@@ -1,0 +1,47 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/gimp-perl/Gimp/Makefile.PL src/gimp-perl/Gimp/Makefile.PL
+--- origsrc/gimp-perl/Gimp/Makefile.PL	2000-07-20 09:44:16.000000000 -0500
++++ src/gimp-perl/Gimp/Makefile.PL	2007-04-22 12:36:50.484375000 -0500
+@@ -4,7 +4,6 @@
+ 
+ sub MY::const_config {
+    my $self = shift;
+-   $self->{LDDLFLAGS}="$GIMP_LIBS_NOUI $self->{LDDLFLAGS} $LDFLAGS $LIBS $INTLLIBS";
+    package MY;
+    $self->SUPER::const_config(@_);
+ }
+@@ -34,6 +33,7 @@
+     'NAME'	=> 'Gimp::Lib',
+     'VERSION_FROM' => '../Gimp.pm',
+     'INC'	=> "$INC1 $GIMP_INC_NOUI $CPPFLAGS $pdl_inc $CFLAGS",
++    'LIBS'	=> "$GIMP_LIBS_NOUI $LDFLAGS $LIBS $INTLLIBS",
+     'DEFINE'	=> "$DEFINE1 $DEFS",
+     'macro'	=> { libdir => $libdir, exec_prefix => $exec_prefix, prefix => $prefix },
+     'TYPEMAPS'	=> ["$topdir/typemap",@pdl_typemaps],
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/gimp-perl/Makefile.PL src/gimp-perl/Makefile.PL
+--- origsrc/gimp-perl/Makefile.PL	2005-09-19 22:27:33.000000000 -0500
++++ src/gimp-perl/Makefile.PL	2007-04-22 12:36:50.500000000 -0500
+@@ -118,10 +118,10 @@
+ 	   $(INSTALLMAN1DIR) \
+ 	   $(INSTALLMAN3DIR) ; \
+ 	do \
+-	   $(MKPATH) "$$dir"; \
+-	   if test -d "$$dir" && test -w "$$dir" ; then : ; else \
++	   $(MKPATH) "$(DESTDIR)$$dir"; \
++	   if test -d "$(DESTDIR)$$dir" && test -w "$(DESTDIR)$$dir" ; then : ; else \
+ 	      echo ; \
+-	      echo "ERROR: installation directory \"$$dir\"" ; \
++	      echo "ERROR: installation directory \"$(DESTDIR)$$dir\"" ; \
+ 	      echo "       is not writable, not installing gimp-perl" ; \
+ 	      echo ; \
+ 	      exit ; \
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in origsrc/gimp-perl/UI/Makefile.PL src/gimp-perl/UI/Makefile.PL
+--- origsrc/gimp-perl/UI/Makefile.PL	2004-03-28 10:42:56.000000000 -0600
++++ src/gimp-perl/UI/Makefile.PL	2007-04-22 12:36:50.500000000 -0500
+@@ -7,7 +7,6 @@
+ 
+ sub MY::const_config {
+    my $self = shift;
+-   $self->{LDDLFLAGS}="$GIMP_LIBS $LDFLAGS $LIBS $self->{LDDLFLAGS}";
+    package MY;
+    $self->SUPER::const_config(@_);
+ }
