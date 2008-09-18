@@ -4,22 +4,22 @@ Gimp-Perl extension for writing Gimp Extensions, Plug-ins,
 and Load & Save-Handlers.
 
 Runtime requirements:
-  cygwin-1.5.25-7
-  gimp2-2.4.4-1
-  glib2-2.14.6-1
-  gtk2-x11-2.12.7-1
-  perl-5.10.0-3
-  perl-Glib-1.164-1
-  perl-Gtk2-1.164-1
+  cygwin-1.5.25-15
+  gimp2-2.4.7-1
+  glib2-2.16.5-1
+  gtk2-x11-2.12.11-1
+  perl-5.10.0-5
+  perl-Glib-1.183-1
+  perl-Gtk2-1.183-1
   perl-PDL-2.4.3-2
 
 Build requirements:
 (besides corresponding devel packages)
-  binutils-20060817-1
-  cygport-0.3.9-1
+  binutils-20080624-2
+  cygport-0.4.0-1
   gcc-core-3.4.4-3
   make-3.81-1
-  pkg-config-0.21-1
+  pkg-config-0.23a-2
   sed-4.1.5-2
 
 Canonical homepage:
@@ -80,7 +80,6 @@ Files included in the binary package:
   /usr/lib/gimp/2.0/plug-ins/prep4gif
   /usr/lib/gimp/2.0/plug-ins/randomart1
   /usr/lib/gimp/2.0/plug-ins/randomblends
-  /usr/lib/gimp/2.0/plug-ins/redeye
   /usr/lib/gimp/2.0/plug-ins/repdup
   /usr/lib/gimp/2.0/plug-ins/roundsel
   /usr/lib/gimp/2.0/plug-ins/scratches
@@ -146,6 +145,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 2.2_pre1-3 -----
+Removed redeye plugin now provided by gimp.
 
 ----- version 2.2_pre1-2 -----
 Rebuilt for perl-5.10.

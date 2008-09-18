@@ -3,9 +3,10 @@ inherit perl
 DESCRIPTION="Gimp Perl extensions"
 HOMEPAGE="http://www.gimp.org/"
 SRC_URI="ftp://ftp.gimp.org/pub/gimp/plug-ins/v${PV_MAJ_MIN}/perl/Gimp-${PV/_}.tar.gz"
+PATCH_URI="2.2_pre1-build.patch"
+
 SRC_DIR="${PN/${PV_MAJ}}"
 
-MAKEOPTS+=" OTHERLDFLAGS=${PERL_VENDORARCH}/auto/Glib/Glib.dll"
 DEPS_PATH="${PERL_VENDORARCH}/auto/Glib"
 
 src_compile() {
@@ -18,4 +19,12 @@ src_compile() {
 		cd ${B}/${d}
 		cygmake manifypods
 	done
+}
+
+src_install() {
+	cd ${B}
+	perl_install
+
+	# gimp-2.4 includes redeye.exe
+	rm -f ${D}/usr/lib/gimp/2.0/plug-ins/redeye
 }
