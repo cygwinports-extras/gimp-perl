@@ -1,0 +1,20 @@
+gimp-2.6: gimptool-2.0 does not respect DESTDIR
+http://bugs.gentoo.org/show_bug.cgi?id=240648
+http://bugzilla.gnome.org/show_bug.cgi?id=578695
+
+--- origsrc/gimp-perl/Makefile.PL	2009-10-25 00:36:15.844701600 -0500
++++ src/gimp-perl/Makefile.PL	2009-10-25 02:24:00.832556100 -0500
+@@ -163,10 +163,11 @@ install-plugins ::
+ 	cd inst-temp ; \\
+ 	\$(UMASK_NULL) ; \\
+ 	\$(CP) ".join(' ',map("'../examples/$_'",sort @pins))." ../Perl-Server . ; \\
+-	\$(CHMOD) 755 * ; \\
+ 	\$(MY_FIXIN) * ; \\
++	\$(CHMOD) 755 * ; \\
++	\$(MKPATH) \$(DESTDIR)`$GIMPTOOL --gimpplugindir`/plug-ins ; \\
+ 	for plugin in * ; do \\
+-	   $GT \"\$\$plugin\" $GT2 ; \\
++	   \$(CP) \"\$\$plugin\" \$(DESTDIR)`$GIMPTOOL --gimpplugindir`/plug-ins ; \\
+ 	done
+ 	\$(RM_RF) inst-temp
+ 
