@@ -1,5 +1,0 @@
-category: Graphics Perl
-requires: gimp2 libgcc1 libglib2.0_0 libgtk2.0_0 perl perl-Glib perl-Gtk2 perl-PDL
-sdesc: "GNU Image Manipulation Program (Perl extensions)"
-ldesc: "Gimp-Perl extension for writing Gimp Extensions, Plug-ins,
-and Load & Save-Handlers."
