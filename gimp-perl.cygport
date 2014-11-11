@@ -1,6 +1,6 @@
 inherit perl
 
-NAME="gimp2-perl"
+NAME="gimp-perl"
 VERSION=2.2_pre1
 RELEASE=4
 CATEGORY="Graphics"
@@ -8,11 +8,10 @@ SUMMARY="GNU Image Manipulation Program (Perl extensions)"
 DESCRIPTION="Gimp-Perl extension for writing Gimp Extensions, Plug-ins,
 and Load & Save-Handlers."
 HOMEPAGE="http://www.gimp.org/"
-SRC_URI="ftp://ftp.gimp.org/pub/gimp/plug-ins/v${PV_MAJ_MIN}/perl/Gimp-${PV/_}.tar.gz"
+SRC_URI="ftp://ftp.gimp.org/pub/gimp/plug-ins/v${PV_MAJ_MIN}/perl/Gimp-${VERSION/_}.tar.gz"
+SRC_DIR=${NAME}
 PATCH_URI="2.2_pre1-build.patch
            2.2_pre1-gimp26-install.patch"
-
-SRC_DIR="${PN/${PV_MAJ}}"
 
 DEPS_PATH="${PERL_VENDORARCH}/auto/Glib"
 
