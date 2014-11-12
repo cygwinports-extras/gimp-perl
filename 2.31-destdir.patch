@@ -1,0 +1,25 @@
+gimp-2.6: gimptool-2.0 does not respect DESTDIR
+http://bugs.gentoo.org/show_bug.cgi?id=240648
+http://bugzilla.gnome.org/show_bug.cgi?id=578695
+
+--- origsrc/Gimp-2.31/examples/Makefile.PL	2014-06-19 09:53:12.000000000 -0500
++++ src/Gimp-2.31/examples/Makefile.PL	2014-11-11 02:23:52.247560200 -0600
+@@ -48,7 +48,8 @@ sub install_plugin_target {
+   my $dest = '$(GIMP_PLUGINS)/'.basename($plugin);
+   <<EOF;
+ $dest : $src
+-	\$(NOECHO) \$(GTINSTALL) "$src"
++	\$(NOECHO) mkdir -p \$(GIMP_PLUGINS)
++	cp "$src" \$(GIMP_PLUGINS)
+ 
+ EOF
+ }
+@@ -73,7 +74,7 @@ undef &MY::postamble; # suppress warning
+    <<EOF;
+ 
+ INST_PLUGINS = ../blib/plugins
+-GIMP_PLUGINS = $cfg{gimpplugindir}
++GIMP_PLUGINS = \$(DESTDIR)$cfg{gimpplugindir}
+ 
+ \$(INST_PLUGINS)\$(DFSEP).exists :: Makefile.PL
+ 	\$(NOECHO) \$(MKPATH) \$(INST_PLUGINS)

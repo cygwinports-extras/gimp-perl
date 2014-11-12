@@ -1,17 +1,17 @@
+CPAN_AUTHOR="etj"
+ORIG_PN="Gimp"
 inherit perl
 
 NAME="gimp-perl"
-VERSION=2.2_pre1
-RELEASE=4
+VERSION=2.31
+RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="GNU Image Manipulation Program (Perl extensions)"
 DESCRIPTION="Gimp-Perl extension for writing Gimp Extensions, Plug-ins,
 and Load & Save-Handlers."
 HOMEPAGE="http://www.gimp.org/"
-SRC_URI="ftp://ftp.gimp.org/pub/gimp/plug-ins/v${PV_MAJ_MIN}/perl/Gimp-${VERSION/_}.tar.gz"
-SRC_DIR=${NAME}
-PATCH_URI="2.2_pre1-build.patch
-           2.2_pre1-gimp26-install.patch"
+
+PATCH_URI="2.31-destdir.patch"
 
 DEPS_PATH="${PERL_VENDORARCH}/auto/Glib"
 
@@ -24,13 +24,4 @@ src_compile() {
 	do
 		cygmake -C ${d} manifypods
 	done
-}
-
-src_install() {
-	cd ${B}
-	perl_install
-	perl_postinst
-
-	# gimp-2.4 includes redeye.exe
-	rm -f ${D}/usr/lib/gimp/2.0/plug-ins/redeye
 }
