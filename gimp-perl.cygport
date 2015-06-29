@@ -4,7 +4,7 @@ inherit perl
 
 NAME="gimp-perl"
 VERSION=2.31
-RELEASE=1
+RELEASE=2
 CATEGORY="Graphics"
 SUMMARY="GNU Image Manipulation Program (Perl extensions)"
 DESCRIPTION="Gimp-Perl extension for writing Gimp Extensions, Plug-ins,
